@@ -1,0 +1,7 @@
+Gremlin Scripts: Use these scripts to initialize your graph schema, load sample data, and perform queries against Neptune.
+
+Python Script: Implement supply chain optimization algorithms using Neptune Python SDK for graph traversal and querying.
+
+Jupyter Notebook: Visualize supply chain data fetched from Neptune using NetworkX and matplotlib.
+
+Documentation: Update README.md and deployment_guide.md with detailed setup instructions, usage guidelines, and explanations.
