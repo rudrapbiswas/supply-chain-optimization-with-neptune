@@ -14,7 +14,7 @@ networkx: Used for creating, manipulating, and visualizing complex networks (gra
 matplotlib: A plotting library for creating static, animated, and interactive visualizations in Python, suitable for visualizing graphs and data plots.
 
 
-Execute Gremlin scripts in scripts/ to set up schema and load data into Neptune.
+Execute Gremlin scripts (01_create_schema.gremlin, 02_load_data.gremlin) in scripts/ to set up schema and load data into Neptune.
 
 Run supply_chain_optimization.py to execute optimization algorithms.
 
