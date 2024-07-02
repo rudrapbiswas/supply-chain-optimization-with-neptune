@@ -1,0 +1,10 @@
+// Gremlin script to load sample data into the supply chain graph
+
+// Example data for suppliers, products, and warehouses
+graph.addVertex(label, 'supplier', 'id', 's3', 'name', 'Supplier C', 'location', 'City Z')
+graph.addVertex(label, 'product', 'id', 'p3', 'name', 'Product 3', 'category', 'Category A')
+graph.addVertex(label, 'warehouse', 'id', 'w3', 'name', 'Warehouse C', 'location', 'City Z')
+
+// Relationships between entities
+g.V().has('supplier', 'id', 's3').addE('supplies').to(g.V().has('product', 'id', 'p3')).property('quantity', 120)
+g.V().has('product', 'id', 'p3').addE('stored_in').to(g.V().has('warehouse', 'id', 'w3'))
