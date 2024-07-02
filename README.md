@@ -8,7 +8,11 @@ Managing a complex supply chain involves multiple suppliers, products, warehouse
 Utilize Amazon Neptune to create a scalable graph database solution for supply chain optimization. The project includes:
 
 Schema Definition: Define vertices (suppliers, products, warehouses) and edges (relationships like supplies, stored_in) using Gremlin.
+
 Data Loading: Load sample data into Neptune to simulate a supply chain network.
+
 Algorithm Implementation: Implement graph algorithms (e.g., shortest path, clustering) to optimize supply chain operations.
+
 Visualization: Visualize supply chain data using Jupyter notebooks with D3.js or similar libraries.
+
 Deployment: Guide for deploying the solution on AWS Neptune and configuring necessary settings.
