@@ -1,0 +1,15 @@
+// Gremlin script to create the graph schema for supply chain optimization
+
+// Define vertex labels and properties
+graph.addVertex(label, 'supplier', 'id', 's1', 'name', 'Supplier A', 'location', 'City X')
+graph.addVertex(label, 'supplier', 'id', 's2', 'name', 'Supplier B', 'location', 'City Y')
+graph.addVertex(label, 'product', 'id', 'p1', 'name', 'Product 1', 'category', 'Category A')
+graph.addVertex(label, 'product', 'id', 'p2', 'name', 'Product 2', 'category', 'Category B')
+graph.addVertex(label, 'warehouse', 'id', 'w1', 'name', 'Warehouse A', 'location', 'City X')
+graph.addVertex(label, 'warehouse', 'id', 'w2', 'name', 'Warehouse B', 'location', 'City Y')
+
+// Define edge labels and properties
+g.V().has('supplier', 'id', 's1').addE('supplies').to(g.V().has('product', 'id', 'p1')).property('quantity', 100)
+g.V().has('supplier', 'id', 's2').addE('supplies').to(g.V().has('product', 'id', 'p2')).property('quantity', 150)
+g.V().has('product', 'id', 'p1').addE('stored_in').to(g.V().has('warehouse', 'id', 'w1'))
+g.V().has('product', 'id', 'p2').addE('stored_in').to(g.V().has('warehouse', 'id', 'w2'))
